@@ -1,18 +1,17 @@
-// User function Template for Java
-
-class Solution {
-    public static String reverseString(String s) {
-        // code here
-        char[] arr = s.toCharArray();
-        int left = 0, right = arr.length - 1;
-
-        while (left < right) {
-            char temp = arr[left];
-            arr[left] = arr[right];
-            arr[right] = temp;
-            left++;
-            right--;
+class Solution 
+{
+    public static String reverseString(String s) 
+    {
+        char [] ch = s.toCharArray();
+        int l = 0, e = ch.length - 1;
+        while(l < e)
+        {
+            char temp = ch[l];
+            ch[l] = ch[e];
+            ch[e] = temp;
+            l++;
+            e--;
         }
-        return new String(arr);
+        return new String(ch);
     }
 }
